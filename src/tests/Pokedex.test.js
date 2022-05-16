@@ -54,6 +54,7 @@ describe('5 - Testa o componente <Pokedex.js />', () => {
     pokemons.forEach(({ type }) => {
       const buttonAll = screen.getByTestId('', { name: /all/i });
       expect(buttonAll).toBeEnabled();
+      userEvent.click(buttonAll);
 
       const filterButton = screen.getByRole('button', { name: type });
       userEvent.click(filterButton);
