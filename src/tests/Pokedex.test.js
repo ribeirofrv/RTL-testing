@@ -21,7 +21,7 @@ describe('5 - Testa o componente <Pokedex.js />', () => {
   it('Quando o botão "Próximo pokémon" é clicado exibe o próximo pokemon', () => {
     renderWithRouter(<App />);
 
-    const buttonNext = screen.getByRole('button', { name: 'Próximo pokémon' });
+    const buttonNext = screen.getByRole('button', { name: /próximo/i });
 
     pokemons.forEach(({ name }) => {
       const nextPokemon = screen.getByText(name);
