@@ -26,6 +26,7 @@ describe('6 - Testa o componente <Pokemon.js />', () => {
 
         expect(pokemonName).toBeInTheDocument();
         expect(pokemonType).toBeInTheDocument();
+        expect(pokemonType).not.toHaveTextContent('');
         expect(pokemonWeightValue).toBeInTheDocument();
         expect(pokemonSprite.src).toBe(imageUrl);
         userEvent.click(buttonNext);
